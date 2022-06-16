@@ -1,7 +1,7 @@
 // theme object here
 export default {
-  primaryColor: "orange",
-  secondaryColor: "copper",
+  primaryColor: "turquoise",
+  secondaryColor: "linen",
   tertiaryColor: "lemonchiffon",
   black: "black",
   white: "white",

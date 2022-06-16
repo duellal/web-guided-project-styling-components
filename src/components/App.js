@@ -30,8 +30,13 @@ export default function App() {
     <div className='container'>
       <h1>My friends:</h1>
       {
-        friends.map(fr => {
-          return <Friend key={fr.id} info={fr} action={openDetails} />
+        friends.map((fr, idx) => {
+          return <Friend 
+                    key={fr.id} 
+                    info={fr} 
+                    action={openDetails} 
+                    besty={idx % 2 === 0}
+                  />
         })
       }
       {
@@ -40,3 +45,5 @@ export default function App() {
     </div>
   )
 }
+
+// What is the easiest way to tell if a number is even or odd in JavaScript --> modulo operator
