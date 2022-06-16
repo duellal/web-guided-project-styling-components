@@ -9,6 +9,7 @@ import { ThemeProvider } from 'styled-components'
 import App from './components/App'
 
 import './styles.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import theme from './theme';
 
 render(
