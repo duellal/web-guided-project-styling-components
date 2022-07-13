@@ -14,3 +14,12 @@ being used by another application.
 - Navigate into the project folder.
 - Run `npm i` to download the project's dependencies listed in the `package.json`.
 - Run `npm start` to compile the React project and serve the page on `http://localhost:1234`.
+
+### Notes:
+Rules for styled components:
+1) Styled components are built outside of the component they serve
+
+2) Styled Components have to be capitalized
+
+3) Do NOT forget semicolons!
+
