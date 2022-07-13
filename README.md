@@ -23,3 +23,18 @@ Rules for styled components:
 
 3) Do NOT forget semicolons!
 
+
+
+#### Sprint Notes:
+Be able to do:
+- use React
+   - imports for react
+   - pass props into a component
+      - destructuring props
+   - create new slice of state
+   - know how to use useEffect
+ - Know how to map over data
+   - axios
+- have at least one style components
+   - import styled
+   - can do a theme js, but don't have to (I think)
