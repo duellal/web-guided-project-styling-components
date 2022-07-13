@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 /*Rules for styled components:
 1) Styled components are built outside of the component they serve
@@ -9,7 +9,14 @@ import styled from 'styled-components'
 3) Do NOT forget semicolons!
 */
 
+const kf = keyframes`
+100%{
+  opacity: 1;
+}
+`
+
 const StyledFriend = styled.div`
+  opacity: 0;
   color: ${prop => {
     return prop.danger ? prop.theme.dangerColor : prop.theme.primaryColor
   }};
@@ -43,6 +50,7 @@ const StyledFriend = styled.div`
   }
 
   transition: all .5s ease;
+  animation: ${kf} .5s ease forwards;
 `;
 
 export default function Friend({ info, action, bold }) {
