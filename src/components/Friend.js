@@ -10,9 +10,10 @@ import styled from 'styled-components'
 */
 
 const StyledFriend = styled.div`
-  color: ${prop =>
-    prop.theme.primaryColor};
-  font-weight: bold;
+  color: ${prop => {
+    return prop.danger ? prop.theme.dangerColor : prop.theme.primaryColor
+  }};
+  font-weight: ${pr => pr.bold ? 'bold' : 'initial'};
   width: 60%;
   display: flex;
   justify-content: space-between;
@@ -20,6 +21,8 @@ const StyledFriend = styled.div`
   &:hover{
     color: ${prop =>
     prop.theme.tertiaryColor};
+    background-color: purple;
+    transition: all .75s ease;
   }
 
   button{
@@ -27,20 +30,28 @@ const StyledFriend = styled.div`
     prop.theme.dangerColor};
     background-color: ${prop =>
     prop.theme.secondaryColor};
+
+    &:hover{
+      transform: scale(1.5);
+      transition: all .75s ease;
+    }
+    transition: all .5s ease;
   }
 
   @media (max-width: 550px){
     width:100%;
   }
+
+  transition: all .5s ease;
 `;
 
-export default function Friend({ info, action }) {
+export default function Friend({ info, action, bold }) {
   return (
-    <StyledFriend>
+    <StyledFriend danger={info.name === 'Cora'} bold={bold}>
       {info.name}
-      <button onClick={() => action(info.id)}>
+      < button onClick={() => action(info.id)}>
         See details
-      </button>
-    </StyledFriend>
+      </button >
+    </StyledFriend >
   )
 }
