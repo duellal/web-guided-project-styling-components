@@ -10,19 +10,23 @@ import styled from 'styled-components'
 */
 
 const StyledFriend = styled.div`
-  color: blue;
+  color: ${prop =>
+    prop.theme.primaryColor};
   font-weight: bold;
   width: 60%;
   display: flex;
   justify-content: space-between;
 
   &:hover{
-    color:green;
+    color: ${prop =>
+    prop.theme.tertiaryColor};
   }
 
   button{
-    color: orange;
-    background-color: darkred;
+    color: ${prop =>
+    prop.theme.dangerColor};
+    background-color: ${prop =>
+    prop.theme.secondaryColor};
   }
 
   @media (max-width: 550px){

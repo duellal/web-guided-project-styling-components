@@ -4,12 +4,17 @@ worker.start()
 
 import React from 'react'
 import { render } from 'react-dom'
+import { ThemeProvider } from 'styled-components'
 
 import App from './components/App'
+import Theme from './theme/index'
 
 import './styles.css'
 
+
 render(
-  <App />,
+  <ThemeProvider theme={Theme}>
+    <App />
+  </ThemeProvider>,
   document.querySelector('#root')
 )
